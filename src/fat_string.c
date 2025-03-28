@@ -7,6 +7,25 @@
 #include <fat_string.h>
 
 
+
+
+char** carr(str_arr str_arr) {
+    char** result = malloc(sizeof(char*) * str_arr.length);
+    if (!result) return NULL;
+
+    for (size_t i = 0; i < str_arr.length; i++) {
+        result[i] = malloc(sizeof(char) * (str_arr.arr[i].length + 1)); // +1 for null terminator
+        if (!result[i]) {
+            while (i > 0) free(result[--i]);
+            free(result);
+            return NULL;
+        }
+        strcpy(result[i], str_arr.arr[i].data);
+    }
+    return result;
+}
+ 
+
 str_arr split(string s, char* delim) {
   str_arr result;
   result.length = 0;

@@ -22,6 +22,7 @@ char pop(string*);
 bool string_cmp(string, string);  
 string string_cat(string, string);  
 char* c_str(string);
+char** carr(str_arr);
 string replace(string, const char*, const char*);
 str_arr split(string, char* delim);
 string str_arr_shift(str_arr*);

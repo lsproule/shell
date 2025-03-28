@@ -5,3 +5,4 @@
 
 string Eval(str_arr cmd);
 
+void execute_with_output(char *, char **);
