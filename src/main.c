@@ -6,12 +6,6 @@
 #include <constants.h>
 #include <fat_string.h>
 
-
-
-
-
-
-
 int main(void){
     char buffer[BUFF_SIZE];
     bool quit = false;
